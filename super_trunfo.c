@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Super Trunfo Game Version 3
+// Super Trunfo Game Version 4
 // Link da atividade no github Estacio
 // https://github.com/Cursos-TI/desafio-cadastro-das-cartas-no-super-trunfo-SilvaVictorDev/blob/main/super_trunfo.c
 
@@ -93,7 +93,7 @@ int main(){
     printf("Nome da Cidade: %s", nameCity1);
     printf("População: %d\n", population1);
     printf("Área: %.2f km2\n", area1);
-    printf("PIB: %.2f bilhões de reais\n", PIB1);
+    printf("PIB: %.2f Bilhões de Reais\n", PIB1);
     printf("Número de Pontos Turísticos: %d\n", turistcAttractions1);
     printf("Densidade Populacional: %.2f hab/km2\n", densPop1);
     printf("PIB per Capita: %.2f reais\n", pibPerCap1);
@@ -106,23 +106,25 @@ int main(){
     printf("Nome da Cidade: %s", nameCity2);
     printf("População: %d\n", population2);
     printf("Área: %.2f km2\n", area2);
-    printf("PIB: %.2f bilhões de reais\n", PIB2);
+    printf("PIB: %.2f Bilhões de Reais\n", PIB2);
     printf("Número de Pontos Túristicos: %d\n", turistcAttractions2);
     printf("Densidade Populacional: %.2f hab/km2\n", densPop2);
     printf("PIB per Capita: %.2f reais\n", pibPerCap2);
 
-    // Print of winner card
+    // Print of Winner card
 
     printf("\n##### Resultado do Jogo: ######\n");
-    printf("\nPopulação: Carta 1 venceu (%d) \n", population1 > population2);
-    printf("Área: Carta 1 venceu (%d) \n", area1 > area2);
-    printf("PIB: Carta 1 venceu (%d) \n", PIB1 > PIB2);
-    printf("Número de Pontos Turísticos: Carta 1 venceu (%d) \n", turistcAttractions1 > turistcAttractions2);
-    printf("Densidade Populacional: Carta 1 venceu (%d) \n", invDensPop1 < invDensPop2);
-    printf("PIB per Capita: Carta 1 venceu (%d) \n", pibPerCap1 > pibPerCap2);
-    printf("Super Power: Carta 1 venceu (%d)\n", supPower1 > supPower2);
 
+    printf("\nComparação de cartas (Atributo: PIB):\n");
+    printf("Carta 1 - São Paulo (SP) PIB: %.2f Bilhões de Reais\n", PIB1);
+    printf("Carta 2 - Rio de Janeiro (RJ) PIB: %.2f Bilhões de Reais\n", PIB2);
 
-    return 0;
+    if (PIB1 > PIB2) {
+        printf("A carta 1 (São Paulo) venceu!\n");
+    }else{
+        printf("A carta 2 (Rio de Janeiro) venceu!\n");
+    }
+
+return 0;
 
 }
